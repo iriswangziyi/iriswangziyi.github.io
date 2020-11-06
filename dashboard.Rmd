@@ -1,71 +1,85 @@
 ---
-title: "NY NOAA"
+title: "Dashboard: NY NOAA"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    source: embed
 ---
 
 ```{r setup, include=FALSE}
-library(flexdashboard)
 library(tidyverse)
-library(viridis)
-#library(p8105.datasets)
+library(p8105.datasets)
 library(plotly)
+
+library(flexdashboard)
 ```
 
 ```{r}
-set.seed(1)
 data("ny_noaa")
-ny_noaa = ny_noaa %>% 
-  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
-  mutate(temp_max = as.numeric(tmax),
-         temp_min = as.numeric(tmin),
-         tmax = as.numeric(tmax),
-         tmin = as.numeric(tmin),
-         snow = round(snow*0.04*4)/4)
+ny_noaa_tidy = ny_noaa %>% 
+  separate(date, 
+           into = c("year","month","day"), 
+           sep = "-") %>% 
+  mutate_at(vars(year,month,day), as.factor) %>% 
+  mutate_at(vars(tmax, tmin, prcp, snow, snwd), as.numeric) %>% 
+  mutate(tmax = tmax / 10,
+         tmin = tmin / 10,
+         prcp = prcp / 10) %>% 
+  sample_n(3000, replace = F)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### The Temparature Change During a Year in CentralPark_NY (USW00094728)
+### Min vs Max Tempatures in NY
 
-```{r The Temparature Change}
-ny_noaa %>% 
-  filter(id == "USW00094728") %>%
-  group_by(month,id,year) %>%
-  summarise(mean_temp = mean(tmax/10)) %>% 
-  ungroup %>%
-  mutate(text_label = str_c("Year: ", year,"\nMonth: ", month,"\nMean Temperature: ", mean_temp)) %>% 
-  plot_ly(x = ~month, y = ~mean_temp, type = "scatter", mode = "markers",
-          alpha = .5, color = ~year, 
-          text = ~text_label)
+```{r}
+ny_noaa_tidy %>% 
+  mutate(text_label = str_c("Year: ", year,
+                            "\nMonth: ", month)) %>% 
+  plot_ly(x = ~tmax, 
+          y = ~tmin, 
+          type = "scatter", 
+          mode = "markers",
+          alpha = .5, 
+          color = ~year, 
+          text = ~text_label,
+          colors = "viridis")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Distributions of Precipitation by Year
+## Distribution of Snowfall in NY
 
-```{r Distributions of Precipitation}
-ny_noaa %>%
-  sample_n(5000, replace = FALSE) %>% 
-  filter(prcp > 0 & prcp < 200) %>%
-  mutate(text_label = str_c("Year: ", year, "\nPrecipitation: ", prcp)) %>% 
-  plot_ly(x = ~year, y = ~prcp, color = ~year, type = "box", 
-          text = ~text_label)
+```{r}
+ny_noaa_tidy %>%
+    filter(snow > 0 & snow < 100) %>%
+    group_by(year) %>%
+    mutate(text_label = str_c("Year: ", year, 
+                              "\n Snowfall(mm): ", snow)) %>%
+    plot_ly(x = ~year, 
+            y = ~snow, 
+            color = ~year, 
+            type = "box", 
+            text = ~text_label,
+            colors = "viridis")
 ```
 
-### Maximum Snowfall Reported by Year
+## Distributions of Avage Precipitation in NY
 
-```{r Maximum Snowfall}
-ny_noaa %>%
-  sample_n(1000, replace = FALSE) %>% 
-  filter(snow > 0 & snow < 100) %>% 
-  group_by(year = as.factor(year)) %>% 
-  summarize(max_snow = max(snow)) %>% 
-  mutate(text_label = str_c("Year: ", year, "\nMaximum Snowfall: ", max_snow)) %>% 
-  plot_ly(x = ~year, y = ~max_snow, color = ~year, type = "bar",
-          text = ~text_label)
+```{r}
+ny_noaa_tidy %>%
+  filter(prcp > 0) %>%
+  group_by(year) %>%
+  summarize(avg_prcp = mean(prcp)) %>% 
+  mutate(text_label = str_c("Year: ", year, 
+                              "\nMean\nPrecipitation(mm): ", avg_prcp)) %>%
+    plot_ly(x = ~year, 
+            y = ~avg_prcp, 
+            color = ~year, 
+            type = "bar", 
+            text = ~text_label,
+            colors = "viridis")
 ```

@@ -1,12 +1,81 @@
 ---
-title: "Ziyi (Iris) Wang"
+title: "Plotly: NY NOAA"
 output: 
   html_document:
     toc: true
-    code_folding: hide
     toc_float: true
 ---
+# Loading data
+We're gonna look at NY NOAA data. 
 
-# This page has information about me
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
 
-I teach p8105.
+```{r}
+data("ny_noaa")
+ny_noaa_tidy = ny_noaa %>% 
+  separate(date, 
+           into = c("year","month","day"), 
+           sep = "-") %>% 
+  mutate_at(vars(year,month,day), as.factor) %>% 
+  mutate_at(vars(tmax, tmin, prcp, snow, snwd), as.numeric) %>% 
+  mutate(tmax = tmax / 10,
+         tmin = tmin / 10,
+         prcp = prcp / 10) %>% 
+  sample_n(3000, replace = F)
+```
+
+# Plotly plots
+
+## Scatterplot - Min vs Max Tempatures in NY
+
+```{r, warning = F, message = F}
+ny_noaa_tidy %>% 
+  mutate(text_label = str_c("Year: ", year,
+                            "\nMonth: ", month)) %>% 
+  plot_ly(x = ~tmax, 
+          y = ~tmin, 
+          type = "scatter", 
+          mode = "markers",
+          alpha = .5, 
+          color = ~year, 
+          text = ~text_label,
+          colors = "viridis")
+```
+
+## Boxplot - Distribution of Snowfall in NY
+values > 0 and < 100 separately by year
+
+```{r, warning = F, message = F}
+ny_noaa_tidy %>%
+    filter(snow > 0 & snow < 100) %>%
+    group_by(year) %>%
+    mutate(text_label = str_c("Year: ", year, 
+                              "\n Snowfall(mm): ", snow)) %>%
+    plot_ly(x = ~year, 
+            y = ~snow, 
+            color = ~year, 
+            type = "box", 
+            text = ~text_label,
+            colors = "viridis")
+```
+
+## Bar plot - Distributions of Avage Precipitation in NY
+
+```{r, warning = F, message = F}
+ny_noaa_tidy %>%
+  filter(prcp > 0) %>%
+  group_by(year) %>%
+  summarize(avg_prcp = mean(prcp)) %>% 
+  mutate(text_label = str_c("Year: ", year, 
+                              "\nMean\nPrecipitation(mm): ", avg_prcp)) %>%
+    plot_ly(x = ~year, 
+            y = ~avg_prcp, 
+            color = ~year, 
+            type = "bar", 
+            text = ~text_label,
+            colors = "viridis")
+```
