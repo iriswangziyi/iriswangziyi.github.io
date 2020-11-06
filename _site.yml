@@ -1,0 +1,14 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<ziyi.w@columbia.edu>
+    - icon: fa-github fa-lg
+      href: https://github.com/iriswangziyi
+output:
+  html_document:
+    theme: cosmo
