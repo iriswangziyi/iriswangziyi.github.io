@@ -197,4 +197,366 @@ $(document).ready(function () {
 <style type="text/css">
 .tabset-dropdown > .nav-tabs {
   display: inline-table;
-  max-he
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="plotly.html">Plotly</a>
+</li>
+<li>
+  <a href="dashboard.html">Dashboard</a>
+</li>
+<li>
+  <a href="mailto:&lt;ziyi.w@columbia.edu&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/iriswangziyi">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Ziyi (Iris) Wang</h1>
+
+</div>
+
+
+<p><img src="images/grad.JPG" style="width:50%"></p>
+<div id="education" class="section level2">
+<h2><strong>EDUCATION</strong></h2>
+<p>Expected May 2025<br />
+<strong>Columbia University Mailman School of Public Health</strong><br />
+<em>Ph.D., Biostatistic</em></p>
+<p>September 2015 - June 2019<br />
+<strong>University of California, San Diego</strong><br />
+<em>B.S., Mathematics-Computer Science, Department of Mathematics</em><br />
+<em>B.S., Ecology, Behavior &amp; Evolution, Division of Biological Science</em><br />
+Phi Beta Kappa, Magna Cum Laude</p>
+<hr />
+</div>
+<div id="professional-experience" class="section level2">
+<h2><strong>PROFESSIONAL EXPERIENCE</strong></h2>
+<div id="kurle-lab-ucsd" class="section level3">
+<h3><em>Kurle Lab, UCSD</em></h3>
+<div id="researcher" class="section level4">
+<h4><em>Researcher</em></h4>
+<p>March 2017 - June 2020<br />
+- Independent project in collaboration with Dr. Rulon Clark of San Diego State University<br />
+- Conducted field research in Sweeney Granite Mountains Desert Research Center (GMDRC) during Summer 2017<br />
+- Analyzed stable isotopes of sidewinder rattlesnakes (Crotalus cerastes) to study their foraging ecology<br />
+- Performed Bayesian Mixing Models in R to determine the trophic niche space occupied by each snake</p>
+</div>
+</div>
+<div id="ucsd-division-of-biological-sciences" class="section level3">
+<h3><em>UCSD Division of Biological Sciences</em></h3>
+<div id="teaching-assistant" class="section level4">
+<h4><em>Teaching Assistant</em></h4>
+<p>September 2017 - Present<br />
+- Assisted courses in Organismic and Evolutionary Biology (lower division), Animal Behavior and Communication (upper division), Introductory Ecology-Organisms and Habitat (upper division)<br />
+- Led review sessions, organized weekly discussions, graded assignments, and held office hour for lectures of 150-400 students</p>
+</div>
+</div>
+<div id="iqvia-san-diego" class="section level3">
+<h3><em>IQVIA, San Diego</em></h3>
+<div id="clinical-trial-assistant-intern" class="section level4">
+<h4><em>Clinical Trial Assistant Intern</em></h4>
+<p>July 2019 - September 2019<br />
+- Provided central study support to project team members, management, and sponsors through coordination, review and maintenance of project documentation<br />
+- Maintained clinical tracking systems for regulatory documents and assisted in preparation, distribution, and management of study progress</p>
+</div>
+</div>
+<div id="big-data-administration-of-nanjing-jiangbei-new-area" class="section level3">
+<h3><em>Big Data Administration of Nanjing Jiangbei New Area</em></h3>
+<div id="summer-intern" class="section level4">
+<h4><em>Summer Intern</em></h4>
+<p>August 2018 - September 2018<br />
+- Redesigned government database for efficient information sharing across administrative agencies<br />
+- Developed workflow for incorporating big data, new technology, and digital management strategies with the project team</p>
+</div>
+</div>
+</div>
+<div id="publication" class="section level2">
+<h2><strong>PUBLICATION</strong></h2>
+<ul>
+<li>Wang, Ziyi, Willem Schep, Hanan Abels-Sullivan and Casey Kwok. <em>“Life on the edge : Abiotic stress and competitive exclusion affect plant communities across a subalpine edaphic gradient.”</em> (2018).</li>
+</ul>
+<hr />
+</div>
+<div id="leadership" class="section level2">
+<h2><strong>LEADERSHIP</strong></h2>
+<ul>
+<li>Biology MS GSA (Graduate Student Association) Representative</li>
+<li>Research Director, Site leader, UCSD Alternative Breaks Trip (Holar, Iceland): Sustainability</li>
+<li>Mentor, Global Ambassadors Program (GAP), Student Affairs, UCSD</li>
+<li>Vice President, Public Relation, Ecology, Behavior &amp; Evolution Club at UCSD</li>
+</ul>
+<hr />
+</div>
+<div id="awards" class="section level2">
+<h2><strong>AWARDS</strong></h2>
+<ul>
+<li>Social Innovation Fund Awards, UCSD ($1500, Healthy Budget Non-traditional Kitchen for the Homeless Project), 2019</li>
+<li>Ecology, Behavior &amp; Evolution (EBE) Excellence Award, Division of Biological Sciences, UCSD, 2019</li>
+<li>Winner of 2019 HackXX hackathon (iTradeNetwork The Freshest Hack Challenge)<br />
+</li>
+<li>Outstanding Changemaker, UCSD, 2019</li>
+<li>Triton Research &amp; Experiential Learning Scholars (TRELS), UCSD, 2019 ($1000 Scholarship each quarter)<br />
+</li>
+<li>Social Innovation Fund Awards, UCSD, 2018 ($1000, Marine Science Communication Project)<br />
+</li>
+<li>Undergraduate Research, Art, and Service Scholarship, UCSD Marshall College 2018 ($1000)<br />
+</li>
+<li>Excellence in Teaching Award 2017 - 2018, Division of Biological Sciences, UCSD</li>
+</ul>
+<hr />
+</div>
+<div id="skills" class="section level2">
+<h2><strong>SKILLS</strong></h2>
+<ul>
+<li>Programming Languages: Java, C, C++, Python, ARM assembly</li>
+<li>Data Analysis: R, SQL, JMP, MATLAB, Julia, Microsoft Office</li>
+<li>Others: Field Research, Teamwork, Leadership, Project Management, Fluent in spoken and written English and Mandarin</li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
