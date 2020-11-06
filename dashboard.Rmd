@@ -10,7 +10,7 @@ output:
 library(flexdashboard)
 library(tidyverse)
 library(viridis)
-library(p8105.datasets)
+#library(p8105.datasets)
 library(plotly)
 ```
 

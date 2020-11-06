@@ -21,29 +21,29 @@ Phi Beta Kappa, Magna Cum Laude
 ***
 ## **PROFESSIONAL EXPERIENCE**
 
-### *Kurle Lab, UCSD*
-#### *Researcher*
-March 2017 - June 2020  
+### **Kurle Lab, UCSD**
+#### Researcher
+*March 2017 - June 2020*  
 - Independent project in collaboration with Dr. Rulon Clark of San Diego State University  
 - Conducted field research in Sweeney Granite Mountains Desert Research Center (GMDRC) during Summer 2017  
 - Analyzed stable isotopes of sidewinder rattlesnakes (Crotalus cerastes) to study their foraging ecology  
 - Performed Bayesian Mixing Models in R to determine the trophic niche space occupied by each snake  
 
-### *UCSD Division of Biological Sciences*  
-#### *Teaching Assistant*  
-September 2017 - Present  
+### **UCSD Division of Biological Sciences**  
+#### Teaching Assistant  
+*September 2017 - Present*   
 - Assisted courses in Organismic and Evolutionary Biology (lower division), Animal Behavior and Communication (upper division), Introductory Ecology-Organisms and Habitat (upper division)  
 - Led review sessions, organized weekly discussions, graded assignments, and held office hour for lectures of 150-400 students  
 
-### *IQVIA, San Diego*
-#### *Clinical Trial Assistant Intern*
-July 2019 - September 2019  
+### **IQVIA, San Diego**
+#### Clinical Trial Assistant Intern
+*July 2019 - September 2019*  
 - Provided central study support to project team members, management, and sponsors through coordination, review and maintenance of project documentation  
 - Maintained clinical tracking systems for regulatory documents and assisted in preparation, distribution, and management of study progress  
 
-### *Big Data Administration of Nanjing Jiangbei New Area*
-#### *Summer Intern*
-August 2018 - September 2018   
+### **Big Data Administration of Nanjing Jiangbei New Area**
+#### Summer Intern
+*August 2018 - September 2018*   
 - Redesigned government database for efficient information sharing across administrative agencies  
 - Developed workflow for incorporating big data, new technology, and digital management strategies with the project team   
 
@@ -60,17 +60,17 @@ August 2018 - September 2018
 
 ***
 ## **AWARDS**
-- Social Innovation Fund Awards, UCSD ($1500, Healthy Budget Non-traditional Kitchen for the Homeless Project), 2019
-- Ecology, Behavior & Evolution (EBE) Excellence Award, Division of Biological Sciences, UCSD, 2019
-- Winner of 2019 HackXX hackathon (iTradeNetwork The Freshest Hack Challenge)  
-- Outstanding Changemaker, UCSD, 2019
-- Triton Research & Experiential Learning Scholars (TRELS), UCSD, 2019 ($1000 Scholarship each quarter)   
-- Social Innovation Fund Awards, UCSD, 2018 ($1000, Marine Science Communication Project)   
-- Undergraduate Research, Art, and Service Scholarship, UCSD Marshall College 2018 ($1000)   
-- Excellence in Teaching Award 2017 - 2018, Division of Biological Sciences, UCSD   
+- **Social Innovation Fund Awards**, UCSD ($1500, Healthy Budget Non-traditional Kitchen for the Homeless Project), 2019
+- **Ecology, Behavior & Evolution (EBE) Excellence Award**, Division of Biological Sciences, UCSD, 2019
+- **Winner of 2019 HackXX hackathon** (iTradeNetwork The Freshest Hack Challenge)  
+- **Outstanding Changemaker, UCSD, 2019
+- **Triton Research & Experiential Learning Scholars (TRELS)**, UCSD, 2019 ($1000 Scholarship each quarter)   
+- **Social Innovation Fund Awards**, UCSD, 2018 ($1000, Marine Science Communication Project)   
+- **Undergraduate Research, Art, and Service Scholarship**, UCSD Marshall College 2018 ($1000)   
+- **Excellence in Teaching Award 2017 - 2018**, Division of Biological Sciences, UCSD   
 
 ***
 ## **SKILLS**
-- Programming Languages: Java, C, C++, Python, ARM assembly
-- Data Analysis: R, SQL, JMP, MATLAB, Julia, Microsoft Office
-- Others: Field Research, Teamwork, Leadership, Project Management, Fluent in spoken and written English and Mandarin
+- **Programming Languages**: Java, C, C++, Python, ARM assembly
+- **Data Analysis**: R, SQL, JMP, MATLAB, Julia, Microsoft Office
+- **Others**: Field Research, Teamwork, Leadership, Project Management, Fluent in spoken and written English and Mandarin
