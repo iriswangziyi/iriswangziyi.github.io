@@ -51,7 +51,7 @@ ny_noaa_tidy %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-## Distribution of Snowfall in NY
+### Distribution of Snowfall in NY
 
 ```{r}
 ny_noaa_tidy %>%
@@ -67,7 +67,7 @@ ny_noaa_tidy %>%
             colors = "viridis")
 ```
 
-## Distributions of Avage Precipitation in NY
+### Distributions of Avage Precipitation in NY
 
 ```{r}
 ny_noaa_tidy %>%
